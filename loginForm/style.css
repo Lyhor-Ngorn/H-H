@@ -7,16 +7,23 @@
 
 body{
   margin-top: 30px;
-  background: rgba(243, 92, 4, 0.883);
+  background-image: url(bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+h2{
+  margin-left: 10%;
+  color: #f1f18d;
+}
 .login-form{
+  margin-left: 10%;
+  background-image: url(image4.jpg);
   width: calc(100% - 20px);
   max-width: 500px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   padding: 50px 40px;
   border-radius: 20px;
 }
@@ -38,12 +45,12 @@ body{
   width: 100%;
   height: 70px;
   border: none;
-  background-color: #ededed;
+  background-color: #ffffff;
   border-radius: 4px;
-  color: #333;
+  color: rgb(255, 255, 255);
   font-size: 18px;
   font-weight: 700;
-  padding: 14px 60px 0 10px;
+  padding: 14px 60px 10px 10px;
 }
 
 .placeholder{
@@ -54,7 +61,7 @@ body{
   line-height: 70px;
   top: 0;
   left: 20px;
-  color: #9d9d9d;
+  color: #ffffff;
   user-select: none;
   pointer-events: none;
 }
@@ -75,7 +82,7 @@ body{
   position: relative;
   font-size: 18px;
   font-weight: 500;
-  color: #333;
+  color: rgb(255, 251, 251);
   margin: 20px 0;
 }
 
@@ -99,7 +106,10 @@ body{
   pointer-events: none;
   opacity: 0;
 }
-
+p{
+  margin-left: 38%;
+  margin-bottom: 4px;
+}
 .checkbox input:checked{
   background-color: #bc252a;
 }
@@ -110,7 +120,7 @@ body{
   height: 100px;
   margin: 40px auto;
   background-color: #f80707;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 40px;
   border: none;
   border-radius: 30px;
@@ -123,19 +133,19 @@ body{
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  color: #555;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: bold;
   margin-bottom: 8px;
   transition: .2s linear;
 }
 
 .login-form a:hover{
-  color: #111;
+  color: rgb(255, 247, 247);
 }
 
 .btn:disabled{
-  background-color: transparent;
-  color: #ddd;
-  border: 2px solid;
+  background-color:rgba(15, 0, 218, 0.808);
+  color: rgba(15, 0, 218, 0.808);
+  border: 5px solid;
 }
