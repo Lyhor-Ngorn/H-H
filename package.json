@@ -1,0 +1,25 @@
+{
+  "name": "h-h_appproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "init": "^0.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menghour123-ops/H-H_AppProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/menghour123-ops/H-H_AppProject/issues"
+  },
+  "homepage": "https://github.com/menghour123-ops/H-H_AppProject#readme"
+}
