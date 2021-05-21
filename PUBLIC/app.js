@@ -10,7 +10,7 @@ function clickIt(event){
     li.appendChild(p);
     p.className = "chart";
     p.textContent = text.value;
-
+    
 }
 
 // get ul from html

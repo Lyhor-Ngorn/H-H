@@ -8,21 +8,25 @@ form{
     height: 7vh;
     display: flex;
     width: 100%;
-    margin-top: 36%;
+    margin-top: 80%;
     bottom:0;
+    position: sticky;
 }
 .head{
     background: rgb(44, 1, 122);
-
+    position: sticky;
+    top: 0;
 }
 .allContain{
     width: 40%;
+    height: 80%;
     border-style: solid 1px black;
     background: rgb(255, 255, 255);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    overflow-y:scroll;
 }
 #notic{
     width: 30px;
@@ -47,9 +51,7 @@ ul{
     display: block;
 }
 .chart{
-    background: rgb(201, 40, 0);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 5px;
     border-radius: 40px;
-    float: right;
 }
