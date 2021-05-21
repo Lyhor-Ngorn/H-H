@@ -7,37 +7,40 @@
 
 body{
   margin-top: 30px;
-  background-image: url(iimage0.jpg);
+  background-image: url(image/iimage0.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 h2{
   margin-left: 10%;
-  color: #000000;
+  color: #f8fc10;
   margin-top: -10%;
-}
+font-family: collapse;}
 img{
   margin-top: -5%;
 }
 .login-form{
-  margin-top: 5%;
+  margin-top: 4%;
   margin-left: 10%;
-  background-image: url(image4.jpg);
+  background-image: url(image/image4.jpg);
   width: calc(100% - 20px);
-  max-width: 500px;
+  max-width: 450px;
+  min-height: auto;
   background-color: rgb(255, 255, 255);
   padding: 50px 40px;
   border-radius: 20px;
+  margin-bottom: 2%;
 }
 
 .login-form h1{
   text-align: center;
   margin: 48px 0;
   font-size: 36px;
-  color: #111;
+  color: rgb(255, 255, 255);
   font-size: 36px;
 }
 
@@ -50,9 +53,9 @@ img{
   width: 100%;
   height: 70px;
   border: none;
-  background-color: #ffffff;
+  background-color: #000000;
   border-radius: 4px;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 250, 250);
   font-size: 18px;
   font-weight: 700;
   padding: 14px 60px 10px 10px;
@@ -114,6 +117,7 @@ img{
 p{
   margin-left: 38%;
   margin-bottom: 4px;
+  color: white;
 }
 .checkbox input:checked{
   background-color: #bc252a;
@@ -150,7 +154,6 @@ p{
 }
 
 .btn:disabled{
-  background-color:rgba(15, 0, 218, 0.808);
+  background: rgba(0, 0, 0, 0.692);
   color: rgba(15, 0, 218, 0.808);
-  border: 5px solid;
 }
