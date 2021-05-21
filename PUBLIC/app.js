@@ -1,16 +1,17 @@
+
+
 const PORT = 3000;
-const IP = "192.168.88.2";
-const URL = "http://"+ IP +":"+PORT;
+const IP = "192.168.88.34";
+const url = "http://"+ IP +":"+PORT;
 function clickIt(event){
     event.preventDefault();
-    console.log("HELLO SECOND TIME")
-    let li = document.createElement("li");
-    UL.appendChild(li);
-    let p = document.createElement("p");
-    li.appendChild(p);
-    p.className = "chart";
-    p.textContent = text.value;
-    
+    console.log(text.value)
+    let data = {
+        "text": text.value
+    }
+    axios.post(url + "/postData",data).then((response) => {
+        console.log(response.data)
+    });
 }
 
 // get ul from html
