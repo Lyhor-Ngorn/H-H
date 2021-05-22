@@ -1,8 +1,7 @@
-
-
 const PORT = 3000;
-const IP = "192.168.88.34";
+const IP = "192.168.88.28";
 const url = "http://"+ IP +":"+PORT;
+
 function clickIt(event){
     event.preventDefault();
     console.log(text.value)
