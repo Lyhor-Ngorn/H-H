@@ -6,9 +6,9 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 const PORTS = 3000;
-const IP = "192.168.88.28";
-const URL = "http://" + IP + ":" + PORTS;
-
+// const IP = "192.168.88.28";
+// const URL = "http://" + IP + ":" + PORTS;
+let url = "https://hour-hour.herokuapp.com/"
 let USER = [
   { name: "lyhor", password: 123456789 },
   { name: "menghour", password: 987654321 },
