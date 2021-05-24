@@ -6,7 +6,7 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 const PORTS = 3000;
-const IP = "192.168.88.14";
+const IP = "192.168.88.18";
 const URL = "http://" + IP + ":" + PORTS;
 // let url = "https://hour-hour.herokuapp.com/"
 let USER = [
@@ -26,3 +26,8 @@ app.post("/postData", (req, res) => {
   fs.writeFileSync("PUBLIC/data.json",JSON.stringify(data));
   res.send(data);
 });
+app.get("/reload",(req,res) => {
+  let data = fs.readFileSync("PUBLIC/data.json").toString();
+  data = JSON.parse(data);
+  res.send(data)
+})

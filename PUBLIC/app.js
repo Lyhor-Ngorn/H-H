@@ -1,16 +1,14 @@
 const PORT = 3000;
-const IP = "192.168.88.14";
+const IP = "192.168.88.18";
 const url = "http://"+ IP +":"+PORT;
 // let url = "https://hour-hour.herokuapp.com/"
 function clickIt(event){
+    event.preventDefault();
     let data = {
         "text": text.value
     }
     axios.post(url + "/postData",data).then((response) => {
-        localStorage.setItem("text",JSON.stringify(response.data))
-        UL.remove();
-        let  ul = document.createElement("ul");
-        container.appendChild(ul);
+
         for(let i of response.data){
             let li = document.createElement("li");
             ul.appendChild(li);
@@ -20,25 +18,24 @@ function clickIt(event){
 }
 
 function loadData(){
-    let getText = localStorage.getItem("text");
-    getText = JSON.parse(getText);
-    let UL = document.querySelector("ul");
-    UL.remove();
-    let  ul = document.createElement("ul");
-    container.appendChild(ul);
-    for(let i of getText){
+    let ul = document.querySelectorAll("ul");
+    ul.remove();
+    axios.get("/reload").then((res) =>{
+        let  ul = document.createElement("ul");
+        container.appendChild(ul);
+        for(let i of res.data){
             let li = document.createElement("li");
             ul.appendChild(li);
             li.textContent = i.text;
         }
+    })
 }
 
 
 
 
 
-// get ul from html
-const UL = document.querySelector("ul");
+
 // get button and add evenlistener
 const text = document.querySelector("#text");
 const  sendIt = document.getElementById("submit");
@@ -48,4 +45,4 @@ const container = document.querySelector(".container");
 
 
 loadData;
-setInterval(loadData,100)
+setInterval(loadData,500)
