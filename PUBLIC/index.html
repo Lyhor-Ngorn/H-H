@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H&H</title>
-    <link rel="stylesheet" href="css\style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H&H</title>
+  <link rel="shortcut icon" href="image/logo-removebg-preview.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="allContain">
-        <div class="head">
-            <div class="notification">
-                <img src="image\notification.png" alt="notificationn" id="notic">
-                <p class="notificate"></p>
-            </div>
-            <div class="user">
-                <p></p>
-            </div>
-        </div>
-        <div class="container">
-            <ul>
-                <li></li>
-            </ul>
-        </div>
-        <form >
-            <input type="text" id="text" placeholder="Type a message">
-            <input type="submit" id="submit"​ value="send">
-        </form>
+  <div class="welcome">
+    <img src="image/logotext.png" alt="">
+    <h2>Hello!! Welcome to my App. <br><br>You can use this application to communicate with other people!!</h2>
+  </div>
+  <form action="#" class="login-form">
+    <h1>Sign In</h1>
+    <div class="textb">
+      <input type="text" required placeholder="Username" id="text">
     </div>
-    <script src="app.js"></script>
+
+    <div class="textb">
+      <input type="password" required placeholder="Password" id="password">
+      <div class="show-password fas fa-eye-slash"></div>
+    </div>
+    <button class="btn fas fa-arrow-right" id="submit" disabled></button>
+    <p id="canNotSignIn"></p>
+    <p>Can't Sign in?</p>
+    <a href="#">Create Account</a>
+  </form>
+<script src="login.js"></script>
+  
 </body>
 </html>

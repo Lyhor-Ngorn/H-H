@@ -1,4 +1,10 @@
-const { response } = require("express");
+// const respon = require("express");
+const text = document.querySelector("#text");
+const password = document.querySelector("#password");
+const PORT = 3000;
+const IP = "192.168.88.18";
+
+
 
 var fields = document.querySelectorAll(".textb input");
 var btn = document.querySelector(".btn");
@@ -24,24 +30,26 @@ document.querySelector(".show-password").addEventListener("click",function(){
       }
 });
 
-function goTo(res){
-        if(res){
-            window.location.pathname = "../index.html";
-        }
-    
-}
+
 
 function sendToServer(e){
     e.preventDefault();
-    axios.post(URL,login).then(goTo);
+    // localStorage.setItem("name",text.value);
+    let login = {"name":text.value,"password":password.value}
+    const URL = "http://"+ IP +":"+PORT;
+    axios.post(URL + "/login",login).then((response) =>{
+        if(response.data){
+            window.location.pathname = "chart/chart.html"
+        }
+        else{
+            let ifCanNot = document.querySelector("#canNotSignIn");
+            ifCanNot.textContent = "Wrong password or name!!";
+            ifCanNot.style.color = "yellow";
+        }
+    });
 }
 
-const text = document.querySelector("#text");
-const password = document.querySelector("#password");
-let login = {"name":text.value,"password":password.value}
-const PORT = 3000;
-const IP = "192.168.137.1";
-const URL = "http://"+ IP +":"+PORT;
+
 
 let submit = document.querySelector("#submit");
 submit.addEventListener("click",sendToServer)

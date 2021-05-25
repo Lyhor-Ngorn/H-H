@@ -119,6 +119,10 @@ p{
   margin-bottom: 4px;
   color: white;
 }
+#canNotSignIn{
+  margin-left: 17%;
+  font-size: 20px;
+}
 .checkbox input:checked{
   background-color: #bc252a;
 }
