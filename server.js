@@ -10,8 +10,8 @@ const IP = "192.168.88.18";
 const URL = "http://" + IP + ":" + PORTS;
 // let url = "https://hour-hour.herokuapp.com/"
 let USER = [
-  { name: "lyhor", password: 123456789 },
-  { name: "menghour", password: 987654321 },
+  { name: "lyhor", password: 123456789,"color":"red" },
+  { name: "menghour", password: 987654321, },
 ];
 
 app.listen(process.env.PORT || PORTS, function () {

@@ -18,9 +18,10 @@ function clickIt(event){
 }
 
 function loadData(){
-    let ul = document.querySelectorAll("ul");
-    ul.remove();
+
     axios.get("/reload").then((res) =>{
+        let oldUl = document.querySelector("ul");
+        oldUl.remove();
         let  ul = document.createElement("ul");
         container.appendChild(ul);
         for(let i of res.data){
@@ -45,4 +46,4 @@ const container = document.querySelector(".container");
 
 
 loadData;
-setInterval(loadData,500)
+setInterval(loadData,1000)
