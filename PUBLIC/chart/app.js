@@ -1,5 +1,5 @@
 const PORT = 3000;
-const IP = "192.168.88.18";
+const IP = "192.168.88.31";
 const url = "http://"+ IP +":"+PORT;
 // let url = "https://hour-hour.herokuapp.com/"
 function clickIt(event){
