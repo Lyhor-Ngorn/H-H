@@ -1,3 +1,5 @@
+// const { link } = require("fs/promises");
+
 const PORT = 3000;
 const IP = "192.168.88.31";
 const url = "http://"+ IP +":"+PORT;
@@ -19,9 +21,9 @@ function clickIt(event){
             if (i.text != ""){
                 let li = document.createElement("li");
                 ul.appendChild(li);
-                li.textContent = i["name"] +":"+ i.text;
+                li.textContent = " ' "+i["name"] +" ' "+" : "+ i.text;
                 if(i.name == getName){
-                    li.style.background = "yellow";
+                    li.style.background = "#C70039";
                 }else{
                     li.style.background = "green";
                 }
@@ -42,15 +44,12 @@ function loadData(){
             if (i.text != ""){
                 let li = document.createElement("li");
                 ul.appendChild(li);
-                li.textContent = i["name"] +":"+"\n"+ i.text;
                 li.style.color = "white";
-                li.style.backgroundSize = "cover";
+                li.textContent = i["name"] +":"+ i.text;
                 if(i.name == getName){
-                    li.style.background = "#66C19C";
-                    li.className = "me";
+                    li.style.background = "#C70039";
                 }else{
-                    li.style.background = "#91B247";
-                    li.className = "other";
+                    li.style.background = "green";
                 }
             }
 
