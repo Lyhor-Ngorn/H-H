@@ -21,7 +21,8 @@ function clickIt(event){
             if (i.text != ""){
                 let li = document.createElement("li");
                 ul.appendChild(li);
-                li.textContent = " ' "+i["name"] +" ' "+" : "+ i.text;
+                li.style.color = "white";
+                li.textContent = i["name"] +":"+ i.text;
                 if(i.name == getName){
                     li.style.background = "#C70039";
                 }else{
@@ -31,6 +32,7 @@ function clickIt(event){
 
         }
     });
+    text.value = null;
 }
 
 function loadData(){
