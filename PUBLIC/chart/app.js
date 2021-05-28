@@ -4,30 +4,56 @@ const url = "http://"+ IP +":"+PORT;
 // let url = "https://hour-hour.herokuapp.com/"
 function clickIt(event){
     event.preventDefault();
+    let getName = localStorage.getItem("name");
     let data = {
-        "text": text.value
+        "text": text.value,
+        "name" : getName
     }
-    axios.post(url + "/postData",data).then((response) => {
 
+    axios.post(url + "/postData",data).then((response) => {
+        let oldUl = document.querySelector("ul");
+        oldUl.remove();
+        let  ul = document.createElement("ul");
+        container.appendChild(ul);
         for(let i of response.data){
-            let li = document.createElement("li");
-            ul.appendChild(li);
-            li.textContent = i.text;
+            if (i.text != ""){
+                let li = document.createElement("li");
+                ul.appendChild(li);
+                li.textContent = i["name"] +":"+ i.text;
+                if(i.name == getName){
+                    li.style.background = "yellow";
+                }else{
+                    li.style.background = "green";
+                }
+            }
+
         }
     });
 }
 
 function loadData(){
-
+    let getName = localStorage.getItem("name");
     axios.get("/reload").then((res) =>{
         let oldUl = document.querySelector("ul");
         oldUl.remove();
         let  ul = document.createElement("ul");
         container.appendChild(ul);
         for(let i of res.data){
-            let li = document.createElement("li");
-            ul.appendChild(li);
-            li.textContent = i.text;
+            if (i.text != ""){
+                let li = document.createElement("li");
+                ul.appendChild(li);
+                li.textContent = i["name"] +":"+"\n"+ i.text;
+                li.style.color = "white";
+                li.style.backgroundSize = "cover";
+                if(i.name == getName){
+                    li.style.background = "#66C19C";
+                    li.className = "me";
+                }else{
+                    li.style.background = "#91B247";
+                    li.className = "other";
+                }
+            }
+
         }
     })
 }

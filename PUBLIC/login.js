@@ -37,6 +37,7 @@ function sendToServer(e){
     // localStorage.setItem("name",text.value);
     let login = {"name":text.value,"password":password.value}
     const URL = "http://"+ IP +":"+PORT;
+    localStorage.setItem("name",text.value);
     axios.post(URL + "/login",login).then((response) =>{
         if(response.data){
             window.location.pathname = "chart/chart.html"
