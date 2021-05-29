@@ -17,11 +17,15 @@ form{
     position: sticky;
     top: 0;
 }
+#emoji{
+    background: rgb(255, 255, 255);
+    outline: none;
+}
 .allContain{
+    background-image: url(images5.jpg);
     width: 40%;
     height: 80%;
     border-style: solid 1px black;
-    background: rgb(255, 255, 255);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -37,12 +41,14 @@ form{
 }
 #text{
     width: 80%;
+    outline: none;
 }
 #submit{
-    width: 20%;
+    width: 15%;
     background: rgb(0, 41, 153);
     color: aliceblue;
     font-size: 20px;
+    cursor: pointer;
 }
 li{
     list-style: none;
@@ -50,11 +56,11 @@ li{
     display: flex;
     border-radius: 10px;
     padding: 10px;
+    
 }
 .nameIt{
     color:yellow;
 }
-.me,
 .other{
     padding: 10px;
     border-radius: 10px;

@@ -6,12 +6,12 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 const PORTS = 3000;
-const IP = "192.168.88.31";
+const IP = "192.168.88.17";
 const URL = "http://" + IP + ":" + PORTS;
 // let url = "https://hour-hour.herokuapp.com/"
 let USER = [
-  { name: "lyhor", password: 123456789,"color":"red" },
-  { name: "menghour", password: 987654321, "color":"blue"}
+  { name: "lyhor", password:123,"color":"red" },
+  { name: "menghour", password: 321, "color":"blue"}
 ];
 
 app.listen(process.env.PORT || PORTS, function () {

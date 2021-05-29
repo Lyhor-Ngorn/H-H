@@ -1,7 +1,7 @@
 // const { link } = require("fs/promises");
 
 const PORT = 3000;
-const IP = "192.168.88.31";
+const IP = "192.168.88.17";
 const url = "http://"+ IP +":"+PORT;
 // let url = "https://hour-hour.herokuapp.com/"
 function clickIt(event){
@@ -23,7 +23,7 @@ function clickIt(event){
                 ul.appendChild(li);
                 li.style.color = "white";
                 li.textContent = i["name"] +":"+ i.text;
-                if(i.name == getName){
+                if(i.text === getName){
                     li.style.background = "#C70039";
                 }else{
                     li.style.background = "green";
