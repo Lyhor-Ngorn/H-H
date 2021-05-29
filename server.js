@@ -14,6 +14,11 @@ let USER = [
   { name: "menghour", password: 321, "color":"blue"}
 ];
 
+
+
+
+
+
 app.listen(process.env.PORT || PORTS, function () {
   console.log("HELLO ON PORT " + PORTS);
 });
@@ -21,8 +26,27 @@ app.use(express.static("PUBLIC"));
 
 app.post("/postData", (req, res) => {
   let data = fs.readFileSync("PUBLIC/chart/data.json").toString();
+  let emojiMap = {
+    ";(" : "😌","><":"😆",":p":"😋","<3":"❤️",":o":"😱",":D":"😛",":":"😶",":|":"😐","$$":"🤑",":x":"😘",":(":"☹️",":E":"😁",":#":"🤐",":@":"😵",
+    "8)":"🤓","^~^":"😖",";<":"🤧","():)":"😇",":}":"🤡",":.)":"😭","b-)":"😎",">_<":"😡","8>":"👽"
+    };
   data = JSON.parse(data);
-  data.push(req.body);
+  let array = {"name" : req.body.name}
+  let appendText = "";
+  let text = req.body.text;
+  text = text.split(" ");
+  let forAdd = "";
+  for(let l of text){
+    if(emojiMap[l] !== undefined){
+      appendText += emojiMap[l];
+    }else{
+      appendText += l
+    }
+    forAdd += appendText;
+    appendText = ""
+  }
+  array["text"] = forAdd;
+  data.push(array);
   fs.writeFileSync("PUBLIC/chart/data.json",JSON.stringify(data));
   res.send(data);
 });
@@ -40,3 +64,5 @@ app.post("/login",(req,res)=>{
   }
   res.send(forSend);
 })
+
+

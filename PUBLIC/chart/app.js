@@ -1,8 +1,9 @@
 // const { link } = require("fs/promises");
 
 const PORT = 3000;
-const IP = "192.168.137.185";
+const IP = "192.168.88.34";
 const url = "http://"+ IP +":"+PORT;
+let could_scroll = true;
 // let url = "https://hour-hour.herokuapp.com/"
 function clickIt(event){
     event.preventDefault();
@@ -11,6 +12,7 @@ function clickIt(event){
         "text": text.value,
         "name" : getName
     }
+    could_scroll = true;
 
     axios.post(url + "/postData",data).then((response) => {
         let oldUl = document.querySelector("ul");
@@ -25,18 +27,19 @@ function clickIt(event){
                 li.appendChild(spanName);
                 spanName.textContent=i.name;
                 spanName.style.color="white";
-                let span = document.createElement("span");
-                li.appendChild(span);
-                span.style.color = "white";
-                span.textContent =i.text;
+                let p = document.createElement("p");
+                li.appendChild(p)
+                p.style.color = "white";
+                p.textContent =i.text;
+                p.className = "txt";
                 spanName.className = "nameSpan";
+
                 if(i.text === getName){
-                    span.style.background = "#C70039";
+                    p.style.background = "#C70039";
                 }else{
-                    span.style.background = "green";
+                    p.style.background = "green";
                 }
             }
-
         }
     });
     text.value = null;
@@ -57,15 +60,19 @@ function loadData(){
                 li.appendChild(spanName);
                 spanName.textContent=i.name;
                 spanName.style.color="white";
-                let span = document.createElement("span");
-                li.appendChild(span);
-                span.style.color = "white";
-                span.textContent =i.text;
+                let p = document.createElement("p");
+                li.appendChild(p)
+                p.style.color = "white";
+                p.textContent =i.text;
+                p.className = "txt";
                 spanName.className = "nameSpan";
+
                 if(i.text === getName){
-                    span.style.background = "#C70039";
+                    p.style.background = "#C70039";
+                    p.style.width = "auto"
                 }else{
-                    span.style.background = "green";
+                    p.style.background = "green";
+                    p.style.width = "auto"
                 }
             }
 
@@ -83,8 +90,16 @@ const text = document.querySelector("#text");
 const  sendIt = document.getElementById("submit");
 sendIt.addEventListener("click", clickIt);
 
-const container = document.querySelector(".container");
+let container = document.querySelector(".container");
+const allContain = document.querySelector(".allContain")
 
-
-loadData;
-setInterval(loadData,1000)
+setInterval(()=>{
+    loadData();
+    1000;
+    if(could_scroll){
+        container.scrollTo(0,container.scrollHeight);
+    }
+})
+container.addEventListener("scroll", () =>{
+    could_scroll = false;
+})

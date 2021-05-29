@@ -1,28 +1,38 @@
 body{
-    background: rgb(0, 0, 0);
+    background: rgb(160, 147, 147);
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 form{
-    height: 7vh;
+    height: 5vw;
     display: flex;
-    width: 100%;
-    margin-top: 80%;
     bottom:0;
     position: sticky;
 }
 .head{
-    background: rgb(44, 1, 122);
+    /* background: rgb(44, 1, 122);
     position: sticky;
-    top: 0;
+    top: 0; */
+    background:teal;
+    height: 5vw;
 }
 #emoji{
     background: rgb(255, 255, 255);
     outline: none;
 }
+.container{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 30vw;
+    overflow-y: scroll;
+}
 .allContain{
-    background-image: url(images5.jpg);
+    /* background: rgba(51, 51, 51, 0.5);
     width: 40%;
     height: 80%;
     border-style: solid 1px black;
@@ -30,8 +40,11 @@ form{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    overflow-y:scroll;
-    overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden; */
+    width: 40%;
+    height: 40vw;
+    background: rgb(15, 206, 142);
 }
 #notic{
     width: 30px;
@@ -45,7 +58,7 @@ form{
     outline: none;
 }
 #submit{
-    width: 15%;
+    width: 20%;
     background: rgb(0, 41, 153);
     color: aliceblue;
     font-size: 20px;
@@ -58,10 +71,14 @@ li{
     padding: 10px;
     
 }
-span{
-    padding: 5px;
+.txt{
+    padding: 10px;
     border-radius: 5px;
+    word-wrap: break-word;
+    line-height: 2;
+    text-align: justify;
 }
+
 .nameSpan{
     display: block;
     margin-bottom: 5px;
@@ -82,7 +99,7 @@ span{
     margin-top: -30px;
 }
 ul{
-    display: block;
+    box-sizing: border-box;
 }
 .chart{
     color: rgb(0, 0, 0);

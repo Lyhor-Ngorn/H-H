@@ -2,7 +2,7 @@
 const text = document.querySelector("#text");
 const password = document.querySelector("#password");
 const PORT = 3000;
-const IP = "192.168.137.185";
+const IP = "192.168.88.34";
 
 
 
