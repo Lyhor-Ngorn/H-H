@@ -1,7 +1,7 @@
 // const { link } = require("fs/promises");
 
 const PORT = 3000;
-const IP = "192.168.88.17";
+const IP = "192.168.137.185";
 const url = "http://"+ IP +":"+PORT;
 // let url = "https://hour-hour.herokuapp.com/"
 function clickIt(event){
@@ -21,12 +21,19 @@ function clickIt(event){
             if (i.text != ""){
                 let li = document.createElement("li");
                 ul.appendChild(li);
-                li.style.color = "white";
-                li.textContent = i["name"] +":"+ i.text;
+                let spanName = document.createElement("spanName");
+                li.appendChild(spanName);
+                spanName.textContent=i.name;
+                spanName.style.color="white";
+                let span = document.createElement("span");
+                li.appendChild(span);
+                span.style.color = "white";
+                span.textContent =i.text;
+                spanName.className = "nameSpan";
                 if(i.text === getName){
-                    li.style.background = "#C70039";
+                    span.style.background = "#C70039";
                 }else{
-                    li.style.background = "green";
+                    span.style.background = "green";
                 }
             }
 
@@ -46,12 +53,19 @@ function loadData(){
             if (i.text != ""){
                 let li = document.createElement("li");
                 ul.appendChild(li);
-                li.style.color = "white";
-                li.textContent = i["name"] +":"+ i.text;
-                if(i.name == getName){
-                    li.style.background = "#C70039";
+                let spanName = document.createElement("spanName");
+                li.appendChild(spanName);
+                spanName.textContent=i.name;
+                spanName.style.color="white";
+                let span = document.createElement("span");
+                li.appendChild(span);
+                span.style.color = "white";
+                span.textContent =i.text;
+                spanName.className = "nameSpan";
+                if(i.text === getName){
+                    span.style.background = "#C70039";
                 }else{
-                    li.style.background = "green";
+                    span.style.background = "green";
                 }
             }
 
