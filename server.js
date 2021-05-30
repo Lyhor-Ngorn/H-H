@@ -42,7 +42,7 @@ app.post("/postData", (req, res) => {
     }else{
       appendText += l
     }
-    forAdd += appendText;
+    forAdd += appendText + " ";
     appendText = ""
   }
   array["text"] = forAdd;
