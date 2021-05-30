@@ -1,11 +1,9 @@
 // const respon = require("express");
 const text = document.querySelector("#text");
 const password = document.querySelector("#password");
-const PORT = 3000;
-const IP = "192.168.88.15";
-
-
-
+// const PORT = 3000;
+// const IP = "192.168.88.18";
+let URL = "https://hour-hour.herokuapp.com/"
 var fields = document.querySelectorAll(".textb input");
 var btn = document.querySelector(".btn");
 function check(){
@@ -14,10 +12,8 @@ function check(){
     else
         btn.disabled = true;  
     }
-
 fields[0].addEventListener("keyup",check);
 fields[1].addEventListener("keyup",check);
-
 document.querySelector(".show-password").addEventListener("click",function(){
     if(this.classList[2] == "fa-eye-slash"){
         this.classList.remove("fa-eye-slash");
@@ -29,14 +25,11 @@ document.querySelector(".show-password").addEventListener("click",function(){
         fields[1].type = "password";
       }
 });
-
-
-
 function sendToServer(e){
     e.preventDefault();
     // localStorage.setItem("name",text.value);
     let login = {"name":text.value,"password":password.value}
-    const URL = "http://"+ IP +":"+PORT;
+    // const URL = "http://"+ IP +":"+PORT;
     localStorage.setItem("name",text.value);
     axios.post(URL + "/login",login).then((response) =>{
         if(response.data){
@@ -49,8 +42,5 @@ function sendToServer(e){
         }
     });
 }
-
-
-
 let submit = document.querySelector("#submit");
 submit.addEventListener("click",sendToServer)
