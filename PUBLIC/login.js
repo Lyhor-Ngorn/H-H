@@ -1,9 +1,9 @@
 // const respon = require("express");
 const text = document.querySelector("#text");
 const password = document.querySelector("#password");
-// const PORT = 3000;
-// const IP = "192.168.88.18";
-let URL = "https://hour-hour.herokuapp.com/"
+const PORT = 3000;
+const IP = "192.168.88.18";
+// let URL = "https://hour-hour.herokuapp.com/"
 var fields = document.querySelectorAll(".textb input");
 var btn = document.querySelector(".btn");
 function check(){
@@ -29,7 +29,7 @@ function sendToServer(e){
     e.preventDefault();
     // localStorage.setItem("name",text.value);
     let login = {"name":text.value,"password":password.value}
-    // const URL = "http://"+ IP +":"+PORT;
+    const URL = "http://"+ IP +":"+PORT;
     localStorage.setItem("name",text.value);
     axios.post(URL + "/login",login).then((response) =>{
         if(response.data){

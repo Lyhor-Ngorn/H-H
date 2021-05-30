@@ -3,13 +3,13 @@ const app = express();
 const fs = require("fs");
 app.use(express.urlencoded());
 app.use(express.json());
-// const PORTS = 3000;
-// const IP = "192.168.88.18";
-// const URL = "http://" + IP + ":" + PORTS;
-let url = "https://hour-hour.herokuapp.com/"
+const PORTS = 3000;
+const IP = "192.168.88.18";
+const URL = "http://" + IP + ":" + PORTS;
+// let url = "https://hour-hour.herokuapp.com/"
 let USER = [
   { name: "lyhor", password:123},
-  { name: "menghour", password: 321}
+  { name: "menghour", password: 321},
   { name: "sokhom", password: 456}
 ];
 app.listen(process.env.PORT || PORTS, function () {
@@ -34,7 +34,7 @@ app.post("/postData", (req, res) => {
     }else{
       appendText += l
     }
-    forAdd += appendText;
+    forAdd += appendText + " ";
     appendText = ""
   }
   array["text"] = forAdd;
