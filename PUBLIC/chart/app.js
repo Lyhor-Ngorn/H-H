@@ -1,6 +1,10 @@
 // const { link } = require("fs/promises");
 const PORT = 3000;
+<<<<<<< HEAD
 const IP = "192.168.88.18";
+=======
+const IP = "192.168.88.25";
+>>>>>>> 9c3f72ecbab92ff449899e4e7cc7121a1d775730
 const url = "http://"+ IP +":"+PORT;
 let could_scroll = true;
 // let url = "https://hour-hour.herokuapp.com/"
