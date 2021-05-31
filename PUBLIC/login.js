@@ -3,10 +3,10 @@ const text = document.querySelector("#text");
 const password = document.querySelector("#password");
 const PORT = 3000;
 
-const IP = "192.168.88.18";
-// let URL = "https://hour-hour.herokuapp.com"
+// const IP = "192.168.88.18";
+// // let URL = "https://hour-hour.herokuapp.com"
 
-const IP = "192.168.88.25";
+// const IP = "192.168.88.25";
 
 const URL ="https://hour-hour.herokuapp.com"
 

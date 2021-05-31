@@ -1,9 +1,9 @@
 // const { link } = require("fs/promises");
-const PORT = 3000;
+// const PORT = 3000;
 
-const IP = "192.168.88.18";
+// const IP = "192.168.88.18";
 
-const IP = "192.168.88.25";
+// const IP = "192.168.88.25";
 
 // const url = "http://"+ IP +":"+PORT;
 let could_scroll = true;
