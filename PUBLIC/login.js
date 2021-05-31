@@ -2,15 +2,15 @@
 const text = document.querySelector("#text");
 const password = document.querySelector("#password");
 const PORT = 3000;
-<<<<<<< HEAD
+
 const IP = "192.168.88.18";
-// let URL = "https://hour-hour.herokuapp.com/"
-=======
+// let URL = "https://hour-hour.herokuapp.com"
+
 const IP = "192.168.88.25";
 
 const URL ="https://hour-hour.herokuapp.com"
 
->>>>>>> 9c3f72ecbab92ff449899e4e7cc7121a1d775730
+
 var fields = document.querySelectorAll(".textb input");
 var btn = document.querySelector(".btn");
 function check(){
