@@ -5,9 +5,9 @@ const PORT = 3000;
 
 const IP = "192.168.88.25";
 
-// const url = "http://"+ IP +":"+PORT;
+const url = "http://"+ IP +":"+PORT;
 let could_scroll = true;
-let url = "https://hour-hour.herokuapp.com"
+// let url = "https://hour-hour.herokuapp.com"
 
 function clickIt(event){
     event.preventDefault();
@@ -24,7 +24,7 @@ function clickIt(event){
         let  ul = document.createElement("ul");
         container.appendChild(ul);
         for(let i of response.data){
-            if (i.text != ""){
+            if (i.text != " "){
                 let li = document.createElement("li");
                 ul.appendChild(li);
                 let spanName = document.createElement("spanName");
@@ -57,7 +57,7 @@ function loadData(){
         let  ul = document.createElement("ul");
         container.appendChild(ul);
         for(let i of res.data){
-            if (i.text != ""){
+            if (i.text != " "){
                 let li = document.createElement("li");
                 ul.appendChild(li);
                 let spanName = document.createElement("spanName");

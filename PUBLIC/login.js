@@ -8,7 +8,7 @@ const PORT = 3000;
 
 const IP = "192.168.88.25";
 
-const URL ="https://hour-hour.herokuapp.com"
+// const URL ="https://hour-hour.herokuapp.com"
 
 
 var fields = document.querySelectorAll(".textb input");
@@ -34,9 +34,8 @@ document.querySelector(".show-password").addEventListener("click",function(){
 });
 function sendToServer(e){
     e.preventDefault();
-    // localStorage.setItem("name",text.value);
     let login = {"name":text.value,"password":password.value}
-    // const URL = "http://"+ IP +":"+PORT;
+    const URL = "http://"+ IP +":"+PORT;
     localStorage.setItem("name",text.value);
     axios.post(URL + "/login",login).then((response) =>{
         if(response.data){
