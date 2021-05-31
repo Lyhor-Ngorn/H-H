@@ -38,7 +38,7 @@ function clickIt(event){
                 p.className = "txt";
                 spanName.className = "nameSpan";
 
-                if(i.text === getName){
+                if(i.text == getName){
                     p.style.background = "red";
                 }else{
                     p.style.background = "green";
