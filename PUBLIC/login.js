@@ -2,10 +2,15 @@
 const text = document.querySelector("#text");
 const password = document.querySelector("#password");
 const PORT = 3000;
+<<<<<<< HEAD
+const IP = "192.168.88.18";
+// let URL = "https://hour-hour.herokuapp.com/"
+=======
 const IP = "192.168.88.25";
 
 const URL ="https://hour-hour.herokuapp.com"
 
+>>>>>>> 9c3f72ecbab92ff449899e4e7cc7121a1d775730
 var fields = document.querySelectorAll(".textb input");
 var btn = document.querySelector(".btn");
 function check(){
@@ -14,10 +19,8 @@ function check(){
     else
         btn.disabled = true;  
     }
-
 fields[0].addEventListener("keyup",check);
 fields[1].addEventListener("keyup",check);
-
 document.querySelector(".show-password").addEventListener("click",function(){
     if(this.classList[2] == "fa-eye-slash"){
         this.classList.remove("fa-eye-slash");
@@ -29,9 +32,6 @@ document.querySelector(".show-password").addEventListener("click",function(){
         fields[1].type = "password";
       }
 });
-
-
-
 function sendToServer(e){
     e.preventDefault();
     // localStorage.setItem("name",text.value);
@@ -49,8 +49,5 @@ function sendToServer(e){
         }
     });
 }
-
-
-
 let submit = document.querySelector("#submit");
 submit.addEventListener("click",sendToServer)

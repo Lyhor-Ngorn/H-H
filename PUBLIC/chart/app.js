@@ -1,10 +1,14 @@
 // const { link } = require("fs/promises");
-
 const PORT = 3000;
+<<<<<<< HEAD
+const IP = "192.168.88.18";
+=======
 const IP = "192.168.88.25";
+>>>>>>> 9c3f72ecbab92ff449899e4e7cc7121a1d775730
 const url = "http://"+ IP +":"+PORT;
 let could_scroll = true;
 // let url = "https://hour-hour.herokuapp.com/"
+
 function clickIt(event){
     event.preventDefault();
     let getName = localStorage.getItem("name");
@@ -35,7 +39,7 @@ function clickIt(event){
                 spanName.className = "nameSpan";
 
                 if(i.text === getName){
-                    p.style.background = "#C70039";
+                    p.style.background = "red";
                 }else{
                     p.style.background = "green";
                 }
@@ -44,7 +48,7 @@ function clickIt(event){
     });
     text.value = null;
 }
-
+//reload or refresh without lose everything
 function loadData(){
     let getName = localStorage.getItem("name");
     axios.get("/reload").then((res) =>{
@@ -73,26 +77,18 @@ function loadData(){
                 }else{
                     p.style.background = "green";
                     p.style.width = "auto"
-                }
-            }
+                };
+            };
 
-        }
-    })
-}
-
-
-
-
-
-
+        };
+    });
+};
 // get button and add evenlistener
 const text = document.querySelector("#text");
 const  sendIt = document.getElementById("submit");
 sendIt.addEventListener("click", clickIt);
-
 let container = document.querySelector(".container");
 const allContain = document.querySelector(".allContain")
-
 setInterval(()=>{
     loadData();
     1000;

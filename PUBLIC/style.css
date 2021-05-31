@@ -25,15 +25,16 @@ img{
 }
 .login-form{
   margin-top: 4%;
-  margin-left: 10%;
+  margin-left: 0%;
+  margin-right: 13%;
   background-image: url(image/image4.jpg);
-  width: calc(100% - 20px);
-  max-width: 450px;
+  width: calc(100% - 50px);
+  max-width: 400px;
   min-height: auto;
   background-color: rgb(255, 255, 255);
-  padding: 50px 40px;
+  padding: 10px 5px;
   border-radius: 20px;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
 
 .login-form h1{
