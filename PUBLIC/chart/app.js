@@ -1,9 +1,9 @@
 // const { link } = require("fs/promises");
-// const PORT = 3000;
+const PORT = 3000;
 
 // const IP = "192.168.88.18";
 
-// const IP = "192.168.88.25";
+const IP = "192.168.88.25";
 
 // const url = "http://"+ IP +":"+PORT;
 let could_scroll = true;
@@ -38,7 +38,7 @@ function clickIt(event){
                 p.className = "txt";
                 spanName.className = "nameSpan";
 
-                if(i.text == getName){
+                if(i.name == getName){
                     p.style.background = "red";
                 }else{
                     p.style.background = "green";
@@ -71,8 +71,8 @@ function loadData(){
                 p.className = "txt";
                 spanName.className = "nameSpan";
 
-                if(i.text === getName){
-                    p.style.background = "#C70039";
+                if(i.name === getName){
+                    p.style.background = "red";
                     p.style.width = "auto"
                 }else{
                     p.style.background = "green";
